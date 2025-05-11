@@ -1,0 +1,149 @@
+/* Reset defaults */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+}
+
+.app-container {
+  padding: 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.app-header h1 {
+  font-size: 2rem;
+  color: #1f3a93;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 1rem;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sidebar {
+  position: sticky;
+  top: 1rem;
+}
+
+/* Card styling */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Filter bar */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.filter-bar strong {
+  color: #444;
+}
+
+/* Events window */
+.events-window {
+  background: #fff;
+  padding: 0.75rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.events-window h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: #1f3a93;
+}
+
+/* Remove bullets and align items */
+.events-window ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.events-window li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.25rem 0;
+}
+
+/* Batch edit controls */
+.batch-edit {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Annotation editor modal */
+.editor-panel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  z-index: 1000;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.editor-panel label {
+  font-weight: 600;
+}
+.editor-panel select {
+  padding: 0.3rem;
+}
+.editor-panel button {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #888;
+}
+
+/* Stats panel */
+.stats-panel {
+  padding: 0.5rem;
+  background: #ecf0f1;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* Lorenz plot card */
+.lorenz-card h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  color: #34495e;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    position: static;
+  }
+}
